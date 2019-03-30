@@ -8,8 +8,12 @@
             <p class="lead">Please use this to contact the site owner.</p>
         </div>
         <div class="card-body">
-            <form action="/contact" method="post">
+            <form action="{{route('contact.store')}}" method="POST">
                 @csrf
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="First and last name">
+                </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com">
